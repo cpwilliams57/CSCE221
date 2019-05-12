@@ -1,0 +1,414 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\newcommand{\AAS}{\textbf{Assignment}}
+\newcommand{\vdist}{\vspace*{10em}}
+\newcommand{\dist}{\hspace{2em}}
+\newcommand{\ddist}{\hspace{4em}}
+\newcommand{\dddist}{\hspace{6em}}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0in
+\headsep 0in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size large
+Assignment
+\begin_inset space ~
+\end_inset
+
+3 – Part 2 & 3 Report
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\emph on
+Part 2 and 3 due March 19 at midnight
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\emph on
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Resources: parser.pdf, Bailey Bauman, Samantha Ray, Christopher Ridley, Abhishek
+ Joshi,Chase Hinesman, William Flores, Ellie Miller,Caleb Johnson
+\end_layout
+
+\begin_layout Enumerate
+Provide the design of your program for the parts 2 and 3 of the assignment.
+ Write about the relation between classes and justification why you chose
+ them.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+In part 2 of the assignment, we were tasked with making templated versions
+ of the LinkedStack and LinkedQueue classes.
+ Both of these classes utilized the Templated DoublyLinkedList class to
+ perform the operations of adding and removing elements through functions
+ relative to each class.
+ In part 3 of the assignment, we were tasked with constructing a class Parser
+ which converts an expression from infix form to postfix form.
+ We also constructed a class Evavluator which takes an expression in postfix
+ form and performs the necessary calculations.
+ Both Evaluator and Parser utilize the LinkedStack and LinkedQueue classes
+ to perform their functions.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Describe each class private and public members, your algorithms and their
+ implementations.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+LinkedQueue
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+DoublyLinkedList<T> ll: A DoublyLinkedList to be utilized by LinkedQueue
+\end_layout
+
+\begin_layout Enumerate
+LinkedQueue<T>(){}: Constructor
+\end_layout
+
+\begin_layout Enumerate
+~LinkedQueue() { } :destructor 
+\end_layout
+
+\begin_layout Enumerate
+isEmpty(): Returns weather or not the LinkedQueue is empty
+\end_layout
+
+\begin_layout Enumerate
+first(): returns first element in the LinkedQueue
+\end_layout
+
+\begin_layout Enumerate
+enqueue(): inserts an element at the end on the queue
+\end_layout
+
+\begin_layout Enumerate
+dequeue(): removes an element at the fron of the queue
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+LinkedStack
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+DoublyLinkedList<T> ll: A DoublyLinkedList to be utilized by LinkedQueue
+\end_layout
+
+\begin_layout Enumerate
+LinkedStack<T>() {}: default constructor
+\end_layout
+
+\begin_layout Enumerate
+isEmpty(): Returns weather or not the stack is empty
+\end_layout
+
+\begin_layout Enumerate
+push (): inserts an element at the end on the stack
+\end_layout
+
+\begin_layout Enumerate
+top(): view top element
+\end_layout
+
+\begin_layout Enumerate
+pop(): removes top element 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Evaluator: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+*parser : pointer to the current stack
+\end_layout
+
+\begin_layout Enumerate
+valStack: value stack
+\end_layout
+
+\begin_layout Enumerate
+int eval(): two arguement evaluator 
+\end_layout
+
+\begin_layout Enumerate
+int eval(): one arguement evaluator
+\end_layout
+
+\begin_layout Enumerate
+isOperator: determines weather or not the token is an operator
+\end_layout
+
+\begin_layout Enumerate
+Evaluator(): constructor
+\end_layout
+
+\begin_layout Enumerate
+getValue(): gets value of the expression
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Parser
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+EnumTokens: Tokens to be used
+\end_layout
+
+\begin_layout Enumerate
+static const char* delimiters: Delimeters to be used
+\end_layout
+
+\begin_layout Enumerate
+LinkedStack<int> opStack: operator stack
+\end_layout
+
+\begin_layout Enumerate
+LinkedQueue<std::string> postfix : postfix queue
+\end_layout
+
+\begin_layout Enumerate
+char curVal: current value
+\end_layout
+
+\begin_layout Enumerate
+const char *tokens: arraay of tokens
+\end_layout
+
+\begin_layout Enumerate
+precTable[]: precedence table 
+\end_layout
+
+\begin_layout Enumerate
+opTable[]: conversion table
+\end_layout
+
+\begin_layout Enumerate
+Parser(string s) : constructor
+\end_layout
+
+\begin_layout Enumerate
+getPostfix(): returns postfix expression
+\end_layout
+
+\begin_layout Enumerate
+printPostfix(): prints postfix expression
+\end_layout
+
+\begin_layout Enumerate
+toPostfix(): converts infix expression to postfix expression
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Write the names of the templated classes of your assignment.
+ Which types have you used to test them for correctness?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+LinkedStack: int, double, string, char
+\end_layout
+
+\begin_layout Enumerate
+LinkedQueue: int, double, string, char
+\end_layout
+
+\begin_layout Enumerate
+TemplatedDoublyLinkedList: int, double, string, char
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Describe all tests done to verify correctness of your program for the parts
+ 2 and 3 of the assignment.
+ Give an explanation why you chose such tests.
+ Include your tests in your assignment report.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+When testing my program, I tested cases that would reflect the ability of
+ my program to perform correct calculations involving addition, subtraction,
+ multiplication, division, and multiple sets of parenthes both involving
+ and not involvong the use of variables.
+ I also made sure to reflect the ability of my program to detect unbalanced
+ parenthesis and terminate when this error was caught.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Graphics
+	filename Division,mult,add.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Graphics
+	filename variable addition.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Graphics
+	filename varaibleSubtraction.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Graphics
+	filename variable multiplication.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Graphics
+	filename variabledivision.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Graphics
+	filename MultipleParenthesis.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Graphics
+	filename UnbalancedParenthesis.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_body
+\end_document
