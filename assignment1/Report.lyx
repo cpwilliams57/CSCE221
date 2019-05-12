@@ -1,0 +1,226 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "helvet" "default"
+\font_typewriter "courier" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\headheight 0cm
+\headsep 0cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Programming Assignment 1 Report 
+\begin_inset Newline newline
+\end_inset
+
+CSCE 221
+\end_layout
+
+\begin_layout Enumerate
+Program description and purpose of the assignment:
+\begin_inset VSpace smallskip
+\end_inset
+
+The purpose of this assignment is to design and implement our own C++ string
+ class, called my_string with all the appropriate member functions.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Data structures description:
+\begin_inset VSpace smallskip
+\end_inset
+
+The data structure of primary focus in this assignment is the C++ array.
+\end_layout
+
+\begin_layout Enumerate
+Instructions to compile and run your program including input and output
+ specifications:
+\begin_inset VSpace smallskip
+\end_inset
+
+In order to compile and run this program, one must use the following steps.
+\begin_inset VSpace smallskip
+\end_inset
+
+1) Place main.cpp, my_ctring.cpp, and my_string.h in the appropriate file on
+ the unix server.
+\begin_inset VSpace smallskip
+\end_inset
+
+2) Navigate to the file where main.cpp, my_ctring.cpp, and my_string.h are
+ located in the terminal.
+\begin_inset VSpace smallskip
+\end_inset
+
+3) Compile the files using the command c++ -std=c++11 *.cpp -o my_string
+ in the terminal.
+\begin_inset VSpace smallskip
+\end_inset
+
+ 4) Run the program using command c++ -std=c++11 *.cpp -o my_string in the
+ terminal.
+\begin_inset VSpace smallskip
+\end_inset
+
+ 5) The program will then execute and ask the user to input a string.
+ Input a string and press enter.
+\begin_inset VSpace smallskip
+\end_inset
+
+6) The program will finish executing and terminate.
+ 
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Logical exceptions (and possible bug descriptions):
+\begin_inset VSpace smallskip
+\end_inset
+
+1)An out_of_range exception will be thrown if the user tries to create a
+ my_string with a negative capacity or a capacity greater than the size.
+ ex.
+ my_string(-3).
+ 
+\begin_inset VSpace smallskip
+\end_inset
+
+2)Because of the substantial use of dynamic memory allocation, there exists
+ a possibility for memory leaks or loss of memory.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+C++ object oriented or generic programming features, including C++11 features:Th
+e object oriented programming features included in this assignment are overloadi
+ng (for the operators and constructors), utilization of the C++ standard
+ library (when including <iostream>) , use of nullptr, and the initilization
+ of data members in constructor
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Testing Results: 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\begin_inset Graphics
+	filename Screen Shot 2017-02-01 at 2.57.43 PM.png
+	scale 35
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Screen Shot 2017-02-01 at 3.02.18 PM.png
+	scale 35
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\begin_inset Graphics
+	filename Screen Shot 2017-02-01 at 3.11.36 PM.png
+	scale 35
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
